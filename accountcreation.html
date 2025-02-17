@@ -27,20 +27,20 @@
         <h2 class="acct">Account</h2>
         <form id="accountForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" value="Mike Ross">
-            
+            <input type="text" id="name" value="">
+
             <label for="language">Preferred Language:</label>
             <select id="language">
                 <option value="English" selected>English</option>
                 <option value="French">French</option>
             </select>
-            
+
             <label for="email">Email:</label>
-            <input type="email" id="email" value="mikerosso2@gmail.com">
-            
+            <input type="email" id="email" value="">
+
             <label for="phone">Phone:</label>
-            <input type="text" id="phone" value="613-657-2433">
-            
+            <input type="text" id="phone" value="">
+
             <button type="button" id="saveBtn">Save</button>
         </form>
     </div>
@@ -59,23 +59,27 @@
         </ul>
     </footer>
     <script>
-        document.getElementById("saveBtn").addEventListener("click", function () {
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-    
-            if (name && email && phone) {
-                localStorage.setItem("userName", name);
-                localStorage.setItem("userEmail", email);
-                localStorage.setItem("userPhone", phone);
-                alert("Account details saved successfully!");
-            } else {
-                alert("Please enter your name, email, and phone number.");
-            }
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("name").value = localStorage.getItem("userName") || "";
+            document.getElementById("email").value = localStorage.getItem("userEmail") || "";
+            document.getElementById("phone").value = localStorage.getItem("userPhone") || "";
+
+            document.getElementById("saveBtn").addEventListener("click", function () {
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+
+                if (name && email && phone) {
+                    localStorage.setItem("userName", name);
+                    localStorage.setItem("userEmail", email);
+                    localStorage.setItem("userPhone", phone);
+                    alert("Account details saved successfully!");
+                } else {
+                    alert("Please enter your name, email, and phone number.");
+                }
+            });
         });
     </script>
-    </body>
-    </html>
 
 </body>
 </html>

@@ -83,7 +83,7 @@
                 alert(`Appointment confirmed as Guest. Missing details: ${missingFields.join(", ")}.\nPlease update your information by clicking the user icon on the top right.`);
             }
             document.getElementById("name").textContent = userName;
-            document.getElementById("phone").textContent = userPhone || "No phone provided, please visit user icon on the top right";
+            document.getElementById("phone").textContent = userPhone || "No phone provided, please update account info";
             document.getElementById("appointmentDate").textContent = appointmentDate;
             document.getElementById("appointmentTime").textContent = appointmentTime;
             document.getElementById("bookingType").textContent = bookingType;
