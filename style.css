@@ -47,6 +47,7 @@ body{
 
 .navbar ul li a:hover {
     background-color: rgb(212, 121, 191);
+    border-radius: 10px;
 }
 
 .navbar ul li img {
@@ -137,7 +138,7 @@ body{
 
 .grid-item {
     color: rgb(0, 0, 0);
-    padding: 10px;
+    padding: px;
     text-align: center;
     font-size: 25px;
     border-radius: 5px;
@@ -290,7 +291,7 @@ body{
     flex: 2;
     background-color: #f1e9e7;
     border: none;
-    padding: 15px 15px;
+    padding: 6px 6px;
     border-radius: 20px; 
     font-size: 14px;
     outline: none;
@@ -363,4 +364,83 @@ button {
 
 button:hover {
     background-color: #ccc;
+}
+
+.names {
+    background-color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+.specpics {
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f3e9e9;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #e0d0d0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #d3bcbc;
+}
+
+.acct {
+    text-align: center;
+}
+
+select {
+    width: 103%;
+    height: 40px;
+    padding: 0px; 
+    font-size: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #d3bcbc;
 }

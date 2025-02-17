@@ -14,6 +14,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="specialists.html">View Specialists</a></li>
             <li><a href="book.html">Book Appointment</a></li>
             <li><a href="location.html">Location & Hours</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -26,6 +27,7 @@
         <h2>Booking Details:</h2>
         <div class="details-box">
             <p><strong>Name:</strong> <span id="name">Mike Ross</span></p>
+            <p><strong>Phone:</strong> <span id="phone"></span></p>
             <p><strong>Date:</strong> <span id="appointmentDate"></span></p>
             <p><strong>Time:</strong> <span id="appointmentTime"></span></p>
             <p><strong>Service:</strong> <span id="bookingType"></span></p>
@@ -40,7 +42,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Retrieve data from localStorage
             document.getElementById("appointmentDate").textContent = localStorage.getItem("appointmentDate");
             document.getElementById("appointmentTime").textContent = localStorage.getItem("appointmentTime");
             document.getElementById("bookingType").textContent = localStorage.getItem("bookingType");
@@ -65,5 +66,38 @@
             </div>
         </ul>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const userName = localStorage.getItem("userName") || "Guest";
+            const userEmail = localStorage.getItem("userEmail") || "";
+            const userPhone = localStorage.getItem("userPhone") || "";
+            const appointmentDate = localStorage.getItem("appointmentDate") || "Not Set";
+            const appointmentTime = localStorage.getItem("appointmentTime") || "Not Set";
+            const bookingType = localStorage.getItem("bookingType") || "Not Set";
+            const specialist = localStorage.getItem("specialist") || "Not Set";
+            let missingFields = [];
+            if (!localStorage.getItem("userName")) missingFields.push("Name");
+            if (!localStorage.getItem("userEmail")) missingFields.push("Email");
+            if (!localStorage.getItem("userPhone")) missingFields.push("Phone");
+            if (missingFields.length > 0) {
+                alert(`Appointment confirmed as Guest. Missing details: ${missingFields.join(", ")}.\nPlease update your information by clicking the user icon on the top right.`);
+            }
+            document.getElementById("name").textContent = userName;
+            document.getElementById("phone").textContent = userPhone || "No phone provided, please visit user icon on the top right";
+            document.getElementById("appointmentDate").textContent = appointmentDate;
+            document.getElementById("appointmentTime").textContent = appointmentTime;
+            document.getElementById("bookingType").textContent = bookingType;
+            document.getElementById("specialist").textContent = specialist;
+            const emailLink = document.querySelector(".confirmationbook a");
+            if (userEmail) {
+                emailLink.textContent = userEmail;
+                emailLink.href = `mailto:${userEmail}`;
+            } else {
+                emailLink.textContent = "No Email Provided, please visit user icon on the top right";
+                emailLink.removeAttribute("href");
+            }
+        });
+    </script>
+    
 </body>
 </html>

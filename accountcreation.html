@@ -6,37 +6,76 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav class="navbar">
         <ul class="logo">
-            <li><img src="image-removebg-preview.png" alt="Image 1"></li>
+            <li><img src="image-removebg-preview.png" alt="Logo"></li>
         </ul>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="specialists.html">View Specialists</a></li>
             <li><a href="book.html">Book Appointment</a></li>
             <li><a href="location.html">Location & Hours</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="accountcreation.html"><img src="usericon.png" alt="Image 1"></li></a>
+            <li><a href="accountcreation.html"><img src="usericon.png" alt="Account"></a></li>
         </ul>
     </nav>
-    <b class="TBD">Account Creation Coming Soon!</b>
+
+    <div class="container">
+        <h2 class="acct">Account</h2>
+        <form id="accountForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" value="Mike Ross">
+            
+            <label for="language">Preferred Language:</label>
+            <select id="language">
+                <option value="English" selected>English</option>
+                <option value="French">French</option>
+            </select>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" value="mikerosso2@gmail.com">
+            
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" value="613-657-2433">
+            
+            <button type="button" id="saveBtn">Save</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
     <footer class="footer">
         <ul class="footerleft">
-            <li class="footerpics"><img src="telephoneicon.png" alt="Image 1"></li>
+            <li><img src="telephoneicon.png" alt="Phone"></li>
             <li>+1 613 264 5555</li>
-            <li class="gapperoni"><img src="mailicon.png" alt="Image 1"></li>
+            <li><img src="mailicon.png" alt="Email"></li>
             <li>bywardstitches@gmail.com</li>
         </ul>
         <ul class="footerright">
-            <div>
-                <li class="footerpics"><img src="locationnobg.png" alt="Image 1"></li>
-            </div>
-            <div>
-                <li>254 William St.</li>
-                <li>Ottawa, ON, Canada</li>
-            </div>
+            <li><img src="locationnobg.png" alt="Location"></li>
+            <li>254 William St., Ottawa, ON, Canada</li>
         </ul>
     </footer>
+    <script>
+        document.getElementById("saveBtn").addEventListener("click", function () {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+    
+            if (name && email && phone) {
+                localStorage.setItem("userName", name);
+                localStorage.setItem("userEmail", email);
+                localStorage.setItem("userPhone", phone);
+                alert("Account details saved successfully!");
+            } else {
+                alert("Please enter your name, email, and phone number.");
+            }
+        });
+    </script>
+    </body>
+    </html>
+
 </body>
 </html>

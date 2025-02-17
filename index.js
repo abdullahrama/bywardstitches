@@ -29,3 +29,33 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "bookingconfirmation.html";
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const nameInput = document.getElementById("name");
+    const languageSelect = document.getElementById("language");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const saveButton = document.getElementById("saveBtn");
+    function loadFromLocalStorage() {
+        if (localStorage.getItem("accountData")) {
+            let data = JSON.parse(localStorage.getItem("accountData"));
+            nameInput.value = data.name;
+            languageSelect.value = data.language;
+            emailInput.value = data.email;
+            phoneInput.value = data.phone;
+        }
+    }
+    saveButton.addEventListener("click", function () {
+        let accountData = {
+            name: nameInput.value,
+            language: languageSelect.value,
+            email: emailInput.value,
+            phone: phoneInput.value
+        };
+
+        localStorage.setItem("accountData", JSON.stringify(accountData));
+        alert("Account details saved!");
+    });
+
+    loadFromLocalStorage();
+});

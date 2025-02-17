@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <title>ByWardStitches</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        window.onload = function() {
-            var params = new URLSearchParams(window.location.search);
-            var email = params.get("email") || "unknown email";
-            document.getElementById("emailMessage").innerText = "Success, a confirmation email has been sent to " + email + "!";
-        };
-    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -29,7 +22,45 @@
         </ul>
     </nav>
 
-    <h1 class="emailsent" id="emailMessage"></h1>
+    <b class="servicesoffered">Meet our Specialists</b>
+
+    <div class="gridservices">
+        <div class="grid-item">
+            <div>
+                <b class="names">Abdullah Ramadan</b>
+            </div>
+            &nbsp;
+            <div>
+                <img class="specpics" src="1701699559438.jpg">
+            </div>
+            <div>Expertise: Fabric Cutting</div>
+        </div>
+
+        <div class="grid-item">
+            <div>
+                <b class="names">Ahmed Zeyada</b>
+            </div>
+            &nbsp;
+            <div>
+                <img class="specpics" src="fuzz3.png">
+            </div>
+            <div>Expertise: Machine Servicing</div>
+        </div>
+
+        <div class="grid-item">
+            <div>
+                <b class="names">Kelly Karson</b>
+            </div>
+            &nbsp;
+            <div>
+                <img class="specpics" src="clairo.png">
+            </div>
+            <div>Expertise: All Specialties</div>
+        </div>
+
+    
+    </div>
+    
 
     <footer class="footer">
         <ul class="footerleft">
