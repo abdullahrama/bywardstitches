@@ -1,0 +1,366 @@
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(219, 192, 228);
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 100px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar ul li a:hover {
+    background-color: rgb(212, 121, 191);
+}
+
+.navbar ul li img {
+    height: 50px;
+}
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    background-color: rgb(243, 233, 233);
+    padding: 0px 20px;
+    font-size: 20px;
+}
+
+.footerleft{
+    list-style-type: none;
+    padding: 20px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: flex-start;
+    flex-grow: 1;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.footerright{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+    flex-grow: 1;
+    font-size: 25px;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    max-width: 2000px;
+    max-height: 75px;
+    text-align: center;
+}
+
+.gapperoni{
+    padding-left: 50px;
+}
+
+.footer ul li img {
+    height: 70px;
+}
+
+.centerpics {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.sewinggirl{
+    height: 600px;
+    justify-content: start;
+}
+
+.mainpageright{
+    padding: 50px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 50px;
+}
+
+.exploreclasses{
+    height: auto;
+    width: 500px;
+}
+
+.gridservices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.grid-item {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.toppadserv {
+    padding-top: 10px;
+}
+
+.servicesoffered{
+    padding-top: 50px;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.servicebutton{
+    height: auto;
+    width: 300px;
+}
+
+.TBD{
+    text-align: center;
+    padding: 300px;
+    font-size: 50px;
+}
+
+.map{
+    height: 600px;
+    justify-content: start;
+    padding-left: 50px;
+    padding: 20px;
+}
+
+.imagethentext{
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.mapicon{
+    height: auto;;
+    width: 60px;
+}
+
+.hours{
+    height: auto;;
+    width: 230px;
+}
+
+.emailform {
+    border: none;
+    background-color:lightgray;
+    font-size: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.headercontact {
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    font-size: 50px;
+}
+
+.sidebyside {
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 35px;
+}
+
+.emailformquestion {
+    border: none;
+    background-color:lightgray;
+    background-size: contain;
+    font-size: 35px;
+    border-radius: 10px;
+    width: 615px;
+    height: 350px;
+}
+
+.topofeachother {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 35px;
+    padding: 15px;
+    align-items: center;
+}
+
+.sendbutton {
+    text-align: center;
+    padding-bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    display: grid;
+    place-items: center
+    
+}
+
+.sendbutton:hover {
+    background-color: rgb(143, 104, 130);
+}
+
+.goofydiv {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.emailsent {
+    text-align: center;
+    padding: 300px;
+}
+
+.bookingbook {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    padding: 15px; 
+    background: white;
+    border-radius: 10px;
+}
+
+.booking-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.booking-row label {
+    font-size: 25px;
+    color: #000000;
+    flex: 1;
+}
+
+.booking-row select {
+    flex: 2;
+    background-color: #f1e9e7;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 20px; 
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: #f1e9e7;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding-top: 10px;
+    margin: auto;
+}
+
+.confirm-btn:hover {
+    background-color: #e0d3d1;
+}
+
+.pbody {
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-top: 20px;
+}
+
+.confirmationbook {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.confirmationbook h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.confirmationbook h2 {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.details-box {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
+    margin-top: 0px;
+}
+
+.details-box p {
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #ddd;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByWardStitches</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".confirm-btn").addEventListener("click", function () {
+        const bookingType = document.getElementById("booking-type").value;
+        const specialist = document.getElementById("specialist").value;
+        const appointmentDate = document.getElementById("appointment-date").value;
+        const appointmentTime = document.getElementById("appointment-time").value;
+        localStorage.setItem("bookingType", bookingType);
+        localStorage.setItem("specialist", specialist);
+        localStorage.setItem("appointmentDate", appointmentDate);
+        localStorage.setItem("appointmentTime", appointmentTime);
+        window.location.href = "bookingconfirmation.html";
+    });
+});
+    </script>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="logo">
+            <li><img src="image-removebg-preview.png" alt="Image 1"></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="book.html">Book Appointment</a></li>
+            <li><a href="location.html">Location & Hours</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="accountcreation.html"><img src="usericon.png" alt="Image 1"></li></a>
+        </ul>
+    </nav>
+
+    <b class="servicesoffered">Booking & Reservations</b>
+
+    <div class="pbody">
+        <div class="bookingbook">
+            <div class="booking-row">
+                <label for="booking-type">Select Booking Type:</label>
+                <select id="booking-type">
+                    <option>Sewing Class</option>
+                    <option>Consultation</option>
+                    <option>Alteration</option>
+                    <option>Equipment Servicing</option>
+                    <option>Fabric Cutting</option>
+                    <option>Pattern Printing</option>
+                </select>
+            </div>
+
+            <div class="booking-row">
+                <label for="specialist">Select A Specialist:</label>
+                <select id="specialist">
+                    <option>Kelly</option>
+                    <option>Abdullah</option>
+                    <option>Ahmed</option>
+                </select>
+            </div>
+
+            <div class="booking-row">
+                <label for="appointment-date">Select Appointment Date:</label>
+                <select id="appointment-date">
+                    <option>March 15th</option>
+                    <option>March 22nd</option>
+                    <option>March 29th</option>
+                </select>
+            </div>
+
+            <div class="booking-row">
+                <label for="appointment-time">Select Appointment Time:</label>
+                <select id="appointment-time">
+                    <option>9:00 AM</option>
+                    <option>5:00 PM</option>
+                    <option>9:00 PM</option>
+                </select>
+            </div>
+
+            <button class="confirm-btn">Confirm</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <ul class="footerleft">
+            <li class="footerpics"><img src="telephoneicon.png" alt="Image 1"></li>
+            <li>+1 613 264 5555</li>
+            <li class="gapperoni"><img src="mailicon.png" alt="Image 1"></li>
+            <li>bywardstitches@gmail.com</li>
+        </ul>
+        <ul class="footerright">
+            <div>
+                <li class="footerpics"><img src="locationnobg.png" alt="Image 1"></li>
+            </div>
+            <div>
+                <li>254 William St.</li>
+                <li>Ottawa, ON, Canada</li>
+            </div>
+        </ul>
+    </footer>
+</body>
+</html>
